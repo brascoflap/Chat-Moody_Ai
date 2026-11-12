@@ -1,0 +1,21 @@
+#!/bin/bash
+# ==============================================================================
+# Moody.Ai macOS Native App Executable
+# Starts Moody.Ai in dedicated standalone window via Chrome, Brave, Edge or Safari
+# ==============================================================================
+
+APP_URL="https://ais-dev-yqg6ldjf6fyrlxctbpx577-650110562309.us-west2.run.app"
+
+# 1. Prefer Google Chrome in app mode (clean standalone native window)
+if [ -d "/Applications/Google Chrome.app" ]; then
+    open -na "Google Chrome" --args --app="$APP_URL"
+# 2. Microsoft Edge in app mode
+elif [ -d "/Applications/Microsoft Edge.app" ]; then
+    open -na "Microsoft Edge" --args --app="$APP_URL"
+# 3. Brave Browser in app mode
+elif [ -d "/Applications/Brave Browser.app" ]; then
+    open -na "Brave Browser" --args --app="$APP_URL"
+# 4. Fallback to Safari or default macOS browser
+else
+    open "$APP_URL"
+fi

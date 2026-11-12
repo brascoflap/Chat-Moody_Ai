@@ -1,0 +1,6 @@
+{
+  "name": "KluisAI - Encrypted Multilingual Voice & Admin Terminal",
+  "description": "Secure multilingual Gemini chatbot with native Dutch voice interface, real-time speech translation, offline client-side AES-GCM encrypted storage, E2EE file sharing, cross-platform synchronization, privacy dashboard, and a secure admin terminal.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
